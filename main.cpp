@@ -7,13 +7,13 @@
 //
 
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 string option;
 string shape;
 double height;
 double radius;
-const double pi = 3.142857143;
 double results;
 double slength;
 double base;
@@ -76,21 +76,21 @@ public:
 class findArea{
 public:
     float areaCylinder() {
-        double areaOfCrossSection = (2)*(pi)*(radius * radius);
-        double middleArea = (2) * (pi) * (radius) * (height);
+        double areaOfCrossSection = (2)*PI*(radius * radius);
+        double middleArea = (2) * PI * (radius) * (height);
         double results = areaOfCrossSection + middleArea;
         return results;
     }
     
     float areaCone() {
-        double baseArea = (pi) * (radius * radius);
-        double surface = (pi) * (radius) * (slength);
+        double baseArea = PI * (radius * radius);
+        double surface = PI * (radius) * (slength);
         double results = baseArea + surface;
         return results;
     }
     
     float areaSphere() {
-        double results = (4) * (pi) * (radius * radius);
+        double results = (4) * PI * (radius * radius);
         return results;
     }
 };
@@ -99,18 +99,18 @@ public:
 class findVolume{
 public:
     float volumeCylinder() {
-        double areaBase = (pi) * (radius * radius);
+        double areaBase = PI * (radius * radius);
         double results = areaBase * height;
         return results;
     }
     
     float volumeCone() {
-        double results = (0.33333333333333) * (pi) * (radius * radius) * (height);
+        double results = (0.33333333333333) * PI * (radius * radius) * (height);
         return results;
     }
     
     float volumeSphere() {
-        double results = (1.33333333333333) * (pi) * (radius * radius * radius);
+        double results = (1.33333333333333) * PI * (radius * radius * radius);
         return results;
     }
 };
